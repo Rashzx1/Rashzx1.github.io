@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+
+}
+
+body{
+    background: #333;
+    color: #fff;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a{
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 35px;
+    transition: .3s ease;
+}
+
+.navbar a:hover{
+    color: cornflowerblue;
+}
+
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.home-content h2{
+    font-size: 25px;
+    font-weight: 700;
+    color: cornflowerblue;
+}
+
+.home-content p{
+    font-size: 15px;
+}
+
+#check{
+    display: none;  
+  }
+  
+  .icons{
+      position: absolute;
+      right: 5%;
+      font-size: 2.8rem;
+      color: #fff;
+      cursor: pointer;
+      display: none; 
+  }
+  
+  /*Breakpoints*/
+  
+  @media (max-width:992px){
+      .header{
+          padding: 1.3rem 5%;
+  
+      }
+  }
+  
+  @media (max-width:768px){
+      .icons{
+          display: inline-flex;
+  
+      }
+  
+      #check:checked~.icons #menu-icon{
+          display: none;
+      }
+  
+      .icons #close-icon{
+          display: none;
+      }
+  
+      #check:checked~.icons #close-icon{
+          display: block;
+      }
+  
+      .navbar{
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 0;
+          background: rgba(0, 0, 0, .1);
+          backdrop-filter: blur(50px);
+          box-shadow: 0.1rem 1rem rgba(0, 0, 0, .1);
+          overflow: hidden;
+          transition: .3s ease;
+  
+      }
+  
+      #check:checked~.navbar{
+          height: 100rem;
+      }
+
+      #check:checked~.home-content{
+        display: none;
+      }
+  
+      .navbar a{
+          display: block;
+          font-size: 1.1rem;
+          margin: 1.5rem 0;
+          text-align: center;
+          transform: translateY(-50px);
+          opacity: 0;
+          transition: .3s ease;
+      }
+  
+      #check:checked~.navbar a{
+          transform: translateY(0);
+          opacity: 1;
+          transition-delay: calc(.15s * var(--i));
+      }
+
+      .home-content{
+        max-width: 500px;
+      }
+
+      .home-content h1{
+        font-size: 25px
+      }
+
+      .home-content h2{
+        font-size: 15px;
+      }
+
+      .home-content p{
+        font-size:10px;
+      }
+  }
+  
