@@ -57,9 +57,11 @@ body{
 }
 
 @media (max-width:768px){
-    .header{
-        margin-left: 2px;
-    }
+    .header a{
+    margin-left: 5.5rem;
+    color: white;
+    text-decoration: none;
+}
     .about-content{
         max-width: 600px;
         text-align: center;
