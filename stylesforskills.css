@@ -57,6 +57,11 @@ body{
 }
 
 @media (max-width:768px){
+    .header a{
+    margin-left: 5.5rem;
+    color: white;
+    text-decoration: none;
+}
     .skills-content{
         max-width: 600px;
         text-align: center;
