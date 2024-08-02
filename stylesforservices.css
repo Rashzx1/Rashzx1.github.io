@@ -63,7 +63,7 @@ body{
 
 @media (max-width:768px){
     .header a{
-    margin-left: 2.5rem;
+    margin-left: 2rem;
     color: white;
     text-decoration: none;
 }
